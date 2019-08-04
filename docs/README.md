@@ -1,2 +1,0 @@
-# Race Taxi
-Jekyll theme.

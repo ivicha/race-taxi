@@ -2,11 +2,12 @@ title: Race Taxi
 email: ivoivicha@gmail.com
 description: A place to join our Race Taxi and make your dreams come true!
 destination: docs
-baseurl: "/race-taxi" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
+exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
 markdown: kramdown
 plugins:
