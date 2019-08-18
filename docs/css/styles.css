@@ -1,3 +1,175 @@
-body{
-    background: aqua;
-}
+@import url("https://fonts.googleapis.com/css?family=Anton|Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html {
+  font: 14px/1.5 Lexend Deca, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+  font-family: Anton, sans-serif; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2.1rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
+h6 {
+  font-size: 1.2rem; }
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 15px; } }
+
+html {
+  max-width: 1100px;
+  min-width: 320px;
+  margin: 0 auto; }
+
+header {
+  width: 100%;
+  background-color: #333333; }
+
+.site-header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .site-header h1 a {
+    text-decoration: none;
+    color: #DF2A53; }
+  .site-header h1 a:hover {
+    color: #F4F4F4; }
+  .site-header #toggle-main-nav-button {
+    color: white;
+    display: none; }
+  @media screen and (max-width: 700px) {
+    .site-header #toggle-main-nav-button {
+      display: none;
+      cursor: pointer; } }
+  .site-header .site-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: stretch; }
+    .site-header .site-nav ul li {
+      padding: 1rem 1.5rem; }
+      .site-header .site-nav ul li a {
+        color: #F4F4F4; }
+    .site-header .site-nav ul li:hover {
+      background-color: #DF2A53; }
+  @media screen and (max-width: 700px) {
+    .site-header .site-nav ul {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 1rem; }
+    .site-header .site-nav ul li {
+      border-bottom: 1px solid #DF2A53;
+      padding: 0.1rem 0 0.3rem 0; } }
+
+@media (max-width: 700px) {
+  .site-header {
+    display: block;
+    text-align: center; } }
+
+.site-header-banner {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .site-header-banner:after {
+    display: block;
+    content: ''; }
+  .site-header-banner.size-large:after {
+    padding-top: calc( (9 / 16) * 100%); }
+  .site-header-banner.size-small:after {
+    padding-top: calc( (9 / 22) * 100%); }
+
+h3 {
+  color: #F4F4F4;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+@media (max-width: 700px) {
+  .site-header-banner h3 {
+    top: 42%; } }
+
+footer {
+  width: 100%;
+  background-color: #333333;
+  color: #F4F4F4; }
+  footer h4 {
+    text-align: center;
+    padding: 1rem 0; }
+  footer .site-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    footer .site-footer .social-menu {
+      width: 30%;
+      margin: 0 auto; }
+      footer .site-footer .social-menu ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none; }
+        footer .site-footer .social-menu ul li {
+          text-decoration: none; }
+          footer .site-footer .social-menu ul li .fab {
+            font-size: 30px;
+            line-height: 60px;
+            transition: 0.6s;
+            color: #000; }
+          footer .site-footer .social-menu ul li .fab:hover {
+            color: #fff; }
+          footer .site-footer .social-menu ul li a {
+            position: relative;
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 0.2rem;
+            background-color: #fff;
+            text-align: center;
+            transition: 0.6s;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5); }
+          footer .site-footer .social-menu ul li a:hover {
+            transform: translate(0, -10px); }
+          footer .site-footer .social-menu ul li:nth-child(1) a:hover {
+            background-color: #3b5999; }
+          footer .site-footer .social-menu ul li:nth-child(2) a:hover {
+            background-color: #55acee; }
+          footer .site-footer .social-menu ul li:nth-child(3) a:hover {
+            background-color: #cd201f; }
+          footer .site-footer .social-menu ul li:nth-child(4) a:hover {
+            background-color: #e4405f; }
+    footer .site-footer .footer-contacts {
+      margin: 0 auto; }
+  @media screen and (max-width: 700px) {
+    footer .site-footer {
+      display: block;
+      text-align: center; } }
+  footer .rights {
+    text-align: center;
+    padding-top: 1rem; }
