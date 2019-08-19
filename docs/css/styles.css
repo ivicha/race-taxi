@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Anton|Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap");
 * {
   padding: 0;
   margin: 0; }
@@ -9,12 +10,17 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+:root {
+  --color-main-bgrd: #ededed;
+  --color-main-title: #DF2A53;
+  --color-header-footer-bgrd: #333333; }
+
 html {
   font: 14px/1.5 Lexend Deca, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
-  font-family: Anton, sans-serif; }
+  font-family: Lexend Giga, sans-serif; }
 
 h1 {
   font-size: 2.5rem; }
@@ -41,11 +47,12 @@ h6 {
 html {
   max-width: 1100px;
   min-width: 320px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background-color: var(--color-main-bgrd); }
 
 header {
   width: 100%;
-  background-color: #333333; }
+  background-color: var(--color-header-footer-bgrd); }
 
 .site-header {
   width: 90%;
@@ -55,16 +62,9 @@ header {
   align-items: center; }
   .site-header h1 a {
     text-decoration: none;
-    color: #DF2A53; }
+    color: var(--color-main-title); }
   .site-header h1 a:hover {
     color: #F4F4F4; }
-  .site-header #toggle-main-nav-button {
-    color: white;
-    display: none; }
-  @media screen and (max-width: 700px) {
-    .site-header #toggle-main-nav-button {
-      display: none;
-      cursor: pointer; } }
   .site-header .site-nav ul {
     display: flex;
     list-style: none;
@@ -74,7 +74,7 @@ header {
       .site-header .site-nav ul li a {
         color: #F4F4F4; }
     .site-header .site-nav ul li:hover {
-      background-color: #DF2A53; }
+      background-color: var(--color-main-title); }
   @media screen and (max-width: 700px) {
     .site-header .site-nav ul {
       display: block;
@@ -82,8 +82,10 @@ header {
       margin: 0 auto;
       margin-bottom: 1rem; }
     .site-header .site-nav ul li {
-      border-bottom: 1px solid #DF2A53;
-      padding: 0.1rem 0 0.3rem 0; } }
+      border-bottom: 1px solid var(--color-main-title);
+      padding: 0.1rem 0; }
+    .site-header a {
+      text-decoration: none; } }
 
 @media (max-width: 700px) {
   .site-header {
@@ -114,11 +116,12 @@ h3 {
 
 @media (max-width: 700px) {
   .site-header-banner h3 {
-    top: 42%; } }
+    top: 35%;
+    font-size: 15px; } }
 
 footer {
   width: 100%;
-  background-color: #333333;
+  background-color: var(--color-header-footer-bgrd);
   color: #F4F4F4; }
   footer h4 {
     text-align: center;
@@ -169,7 +172,74 @@ footer {
   @media screen and (max-width: 700px) {
     footer .site-footer {
       display: block;
-      text-align: center; } }
+      text-align: center; }
+      footer .site-footer .social-menu {
+        padding-bottom: 1rem; }
+        footer .site-footer .social-menu ul li .fab {
+          color: #fff; }
+        footer .site-footer .social-menu ul li:nth-child(1) a {
+          background-color: #3b5999; }
+        footer .site-footer .social-menu ul li:nth-child(2) a {
+          background-color: #55acee; }
+        footer .site-footer .social-menu ul li:nth-child(3) a {
+          background-color: #cd201f; }
+        footer .site-footer .social-menu ul li:nth-child(4) a {
+          background-color: #e4405f; } }
   footer .rights {
     text-align: center;
     padding-top: 1rem; }
+
+.gallery-label h2 {
+  text-align: center;
+  color: var(--color-main-title);
+  margin: 3rem 0 1rem 0; }
+
+.gallery-label p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #656665;
+  font-size: 15px; }
+
+ul.gallery {
+  padding: 0;
+  margin: 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  ul.gallery li {
+    width: 32%;
+    list-style: none;
+    position: relative;
+    margin-bottom: 2%;
+    overflow: hidden;
+    box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in; }
+    ul.gallery li a {
+      display: block;
+      position: relative;
+      pointer-events: none; }
+    ul.gallery li a:before {
+      display: block;
+      content: '';
+      padding-top: calc( (9 / 16) * 100%); }
+  @media (min-width: 700px) {
+    ul.gallery li:hover {
+      transform: scale(1.12);
+      z-index: 4; } }
+  ul.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+@media (max-width: 1000px) {
+  ul.gallery li {
+    width: 48%; } }
+
+@media (max-width: 700px) {
+  ul.gallery li {
+    width: 95%;
+    margin: 2rem auto; } }

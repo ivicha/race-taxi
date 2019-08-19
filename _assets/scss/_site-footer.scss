@@ -1,6 +1,6 @@
 footer{
     width: 100%;
-    background-color: #333333;
+    background-color: var(--color-header-footer-bgrd);
     color:  #F4F4F4;
 
     h4{
@@ -82,6 +82,30 @@ footer{
         .site-footer{
             display: block;
             text-align: center;
+        
+            .social-menu{
+                padding-bottom: 1rem;
+
+                & ul li .fab{
+                    color: #fff;
+                }
+
+                & ul li:nth-child(1) a{
+                    background-color: #3b5999;
+                }
+
+                & ul li:nth-child(2) a{
+                    background-color: #55acee;
+                }
+
+                & ul li:nth-child(3) a{
+                    background-color: #cd201f;
+                }
+
+                & ul li:nth-child(4) a{
+                    background-color: #e4405f;
+                }
+            }
         }
     }
 

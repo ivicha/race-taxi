@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    background-color: #333333;
+    background-color: var(--color-header-footer-bgrd);
 }
 .site-header{
     width: 90%;
@@ -11,24 +11,12 @@ header{
 
     h1 a{
         text-decoration: none;
-        color: #DF2A53;
+        color: var(--color-main-title);
     }
 
     h1 a:hover{
         color: #F4F4F4;  
       }
-
-    #toggle-main-nav-button{
-        color: white;
-        display: none;
-    }
-
-    @media screen and(max-width: 700px){
-        #toggle-main-nav-button{
-            display: none;
-            cursor: pointer;
-        }
-    }
 
     .site-nav{
             
@@ -46,7 +34,7 @@ header{
             }
 
             li:hover{
-              background-color: #DF2A53;  
+              background-color: var(--color-main-title);  
             }
         }
         
@@ -60,8 +48,12 @@ header{
         }
 
         .site-nav ul li{
-            border-bottom: 1px solid #DF2A53;
-            padding: 0.1rem 0 0.3rem 0;
+            border-bottom: 1px solid var(--color-main-title);
+            padding: 0.1rem 0;
+        }
+
+        & a{
+            text-decoration: none;
         }
     }  
 }
@@ -107,6 +99,7 @@ h3{
 
 @media(max-width: 700px){
     .site-header-banner h3{
-        top: 42%;
+        top: 35%;
+        font-size: 15px;
     }
 }
