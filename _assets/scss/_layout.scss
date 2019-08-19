@@ -18,6 +18,14 @@ html{
     }
 }
 
+hr{
+    height: 1px;
+    background-color: var(--color-main-title);
+    border: none;
+    margin-top: 2rem;
+}
+
+
 @media(max-width: 700px){
     .site-content {
 

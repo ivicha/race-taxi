@@ -1,0 +1,34 @@
+.about-section{
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+
+    hr{
+        margin-top: 5rem;
+    }
+
+    ul li{
+        list-style: none;
+
+        .video-container{
+            position: relative;
+            width: 60%;
+            height: 0;
+            padding-bottom: (9 / 24) * 100%;
+            margin: 1.5rem auto 0 auto;
+
+            .video{
+                position: absolute;
+                top: 0; 
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media(max-width: 500px){
+            .video-container{
+                width: 100%;
+                padding-bottom: (9 / 16) * 100%;
+            }
+        }
+    }
+}
