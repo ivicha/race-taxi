@@ -1,8 +1,7 @@
 title: Race Taxi
 email: ivoivicha@gmail.com
 description: A place to join our Race Taxi and make your dreams come true!
-destination: docs
-#baseurl: "" 
+destination: docs 
 baseurl: "/race-taxi" 
 url: "" 
 twitter_username: jekyllrb
