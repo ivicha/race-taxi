@@ -57,7 +57,9 @@ html {
     color: var(--color-main-title);
     margin: 4rem 0 1rem 0; }
   .site-content p {
-    color: var(--color-main-text); }
+    color: var(--color-main-text);
+    max-width: 800px;
+    margin: 0 auto; }
 
 hr {
   height: 1px;
@@ -208,6 +210,109 @@ footer {
     text-align: center;
     padding-top: 1rem; }
 
+.home .intro h1 {
+  font-size: 3rem; }
+
+.home .intro h6 {
+  color: #403f3e; }
+
+.home .intro span {
+  color: var(--color-main-title); }
+
+.home .race-types {
+  padding: 0;
+  margin: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .home .race-types li {
+    width: 32%;
+    list-style: none;
+    position: relative;
+    border: 1px solid var(--color-main-title);
+    border-radius: 5%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in;
+    box-shadow: 0 0 0.9rem 0 rgba(0, 0, 0, 0.3); }
+    .home .race-types li a {
+      text-decoration: none; }
+    .home .race-types li .type-of-race {
+      display: block;
+      position: relative;
+      overflow: hidden; }
+    .home .race-types li .type-of-race:before {
+      display: block;
+      content: '';
+      padding-top: calc( (9 / 16) * 100%); }
+    .home .race-types li img {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .home .race-types li h6 {
+      margin: 1rem; }
+  @media (min-width: 700px) {
+    .home .race-types li:hover {
+      transform: scale(1.12);
+      z-index: 4;
+      background-color: var(--color-main-title); }
+      .home .race-types li:hover h6 {
+        color: white; } }
+
+@media (max-width: 1000px) {
+  .home .race-types li {
+    width: 48%;
+    margin: 1.5rem auto; } }
+
+@media (max-width: 700px) {
+  .home .race-types li {
+    width: 95%; } }
+
+.home .home-cars {
+  display: block;
+  width: 90%;
+  margin: 0 auto; }
+  .home .home-cars .best-cars {
+    display: block; }
+    .home .home-cars .best-cars li {
+      display: flex;
+      overflow: hidden;
+      margin: 2rem 0; }
+      .home .home-cars .best-cars li .img-wrapper {
+        display: block;
+        width: 50%;
+        position: relative;
+        overflow: hidden; }
+      .home .home-cars .best-cars li .img-wrapper:before {
+        display: block;
+        content: '';
+        padding-top: calc( (9 / 16) * 100%); }
+      .home .home-cars .best-cars li img {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .home .home-cars .best-cars li .car-info {
+        width: 100%; }
+        .home .home-cars .best-cars li .car-info h6 {
+          margin: 0 auto; }
+        .home .home-cars .best-cars li .car-info ul {
+          padding-left: 1rem; }
+          .home .home-cars .best-cars li .car-info ul li {
+            margin: 0; }
+    @media (max-width: 700px) {
+      .home .home-cars .best-cars li {
+        display: block;
+        margin: 3rem; }
+        .home .home-cars .best-cars li .img-wrapper {
+          width: 100%; } }
+
 .gallery-label p {
   margin-bottom: 2rem; }
 
@@ -298,6 +403,8 @@ ul.gallery {
 .about-section {
   max-width: 800px;
   margin: 0 auto 2rem auto; }
+  .about-section span {
+    color: var(--color-main-title); }
   .about-section hr {
     margin-top: 5rem; }
   .about-section ul li {
