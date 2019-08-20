@@ -3,6 +3,7 @@ email: ivoivicha@gmail.com
 description: A place to join our Race Taxi and make your dreams come true!
 destination: docs 
 baseurl: "/race-taxi" 
+# baseurl: ""
 url: "" 
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -12,6 +13,7 @@ exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.jso
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
